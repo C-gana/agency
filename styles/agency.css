@@ -1,0 +1,149 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+}
+body{
+  background: url(../images/main-bg.jpg);
+  background-position: top;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.nav-top{
+  display: flex;
+  background-color: darkgoldenrod;
+  color: white;
+  padding: 5px 200px;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav{
+  display: flex;
+  position: sticky;
+  top: 0;
+  background-color: rgb(236, 236, 236);
+  height: 65px;
+  place-items: center;
+  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.486);
+  z-index: 100;
+}
+
+.logo{
+  width: 150px;
+  padding: 0px 10px;
+}
+
+.z{
+  display: inline;
+  background-color: darkgoldenrod;
+  color: white;
+  text-align: center;
+  padding: 10px 13px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+.nav-links{
+  flex: 1;
+  display: flex;
+  place-content: center;
+}
+ul li{
+  display: inline;
+}
+li a{
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  transition: all 0.15s;
+}
+
+li a:hover{
+  background-color: darkgoldenrod;
+  color: whitesmoke;
+}
+/* welcome section */
+.container{
+  height: 400px;
+}
+
+/* search destination */
+.search{
+  background-color: white;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.5);
+}
+
+.search-input{
+  padding: 6px 10px;
+  width: 410px;
+}
+
+.search-input:focus{
+  outline: darkgoldenrod solid 2px;
+  width: 412px;
+  margin-left: 2px;
+  border: none;
+}
+.search-button{
+  color: white;
+  background-color: darkgoldenrod;
+  border: none;
+  cursor: pointer;
+  padding: 8px 10px;
+  margin-left: -5px;
+}
+
+/* destination styles */
+#destinations{
+  background-color: rgba(255, 255, 255, 0.644);
+  padding: 50px 0px;
+}
+
+.title{
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 20px;
+  padding-left: 10px;
+  text-align: center;
+}
+.line{
+  background-color: rgb(187, 134, 0);
+  width: 110px;
+  height: 5px;
+  margin: auto;
+
+}
+
+.section-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 30px 20px;
+  margin: 30px 20px;
+}
+
+.preview{
+  padding: 3px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.507);
+  border: none;
+  border-radius: 10px;
+}
+.preview img{
+  width: 100%;
+  border-radius: 3px;
+}
+
+.preview div{
+  text-align: center;
+  font-weight: bold;
+}
