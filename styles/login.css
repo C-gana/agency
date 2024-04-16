@@ -1,0 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: arial;
+  box-sizing: border-box;
+}
+body {
+  background-image: url(../images/bg6.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 250px;
+  row-gap: 5px;
+  margin: auto;
+  margin-top: 150px;
+  min-width: 500px;
+  max-width: 600px;
+}
+.login-container {
+  background-color: rgba(202, 191, 191, 0.541);
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
+  height: 230px;
+  padding: 10px;
+}
+
+.logo-container {
+  background-color: linear(rgb(0, 0, 0), rgb(0, 98, 78));
+  height: 40px;
+  margin-bottom: 10px;
+}
+.title {
+  font-weight: 600;
+  text-align: center;
+}
+
+.email,
+.pwd {
+  width: 100%;
+  padding: 5px;
+  margin: 5px 0px;
+  border: none;
+  box-shadow: inset 2px 2px 3px rgba(0, 0, 0, 0.37);
+  border-radius: 4px;
+}
+
+.login-button {
+  border-radius: 4px;
+  width: 100%;
+  border: none;
+  font-size: 16px;
+  padding: 5px;
+  margin-top: 5px;
+  font-weight: 500;
+  cursor: pointer;
+  background-color: chocolate;
+  color: white;
+}
+
+.login-button:hover {
+  background-color: rgb(187, 93, 26);
+}
+.desc {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+}
+
+.desc div {
+  font-weight: bold;
+  font-size: 50px;
+}
+.desc p {
+  font-size: 22px;
+}
+.forgot-new {
+  display: flex;
+  margin-top: 10px;
+  justify-content: space-between;
+}
+.forgot-new a {
+  font-size: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.forgot-new a:hover {
+  text-decoration: underline;
+}

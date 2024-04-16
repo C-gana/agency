@@ -1,76 +1,15 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: arial;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body {
-  background: url(../images/bg6.jpg);
-  background-position: center;
+  background: url(../images/bg4_home.jpg);
+  background-position: top;
   background-size: cover;
   background-attachment: fixed;
 }
 
-.nav-top {
-  display: grid;
-  grid-template-columns: 100px 110px 1fr 120px 100px;
-  background-color: white;
-  padding: 5px 20px;
-  font-size: 12px;
-  align-items: center;
-  justify-content: space-between;
-}
-nav {
-  display: flex;
-  position: sticky;
-  top: 0;
-  /*background-color: #461f0f;*/
-  background-color: #1a4645;
-  height: 65px;
-  place-items: center;
-  /*box-shadow: 1px 6px 8px rgba(0, 0, 0, 0.486);*/
-  box-shadow: 1px 2px 3px rgba(255, 255, 255, 0.274);
-  z-index: 100;
-}
-
-.logo {
-  width: 150px;
-  padding: 0px 10px;
-  color: white;
-}
-
-.z {
-  display: inline;
-  background-color: black;
-  color: #f8bc24;
-  outline: white solid 3px;
-  text-align: center;
-  padding: 7px 10px;
-  font-weight: bolder;
-  border-radius: 30px;
-}
-
-.logo-name {
-  display: inline;
-}
-
-.nav-links {
-  flex: 1;
-  display: flex;
-  place-content: center;
-}
-ul li {
-  display: inline;
-}
-li a {
-  text-decoration: none;
-  color: white;
-  padding: 15px 10px;
-  transition: all 0.15s;
-}
-
-li a:hover {
-  background-color: gray;
-}
 /* welcome section */
 .container {
   height: 200px;
@@ -85,7 +24,7 @@ li a:hover {
   width: max-content;
   font-size: 70px;
   font-weight: bold;
-  color: #f58800;
+  color: white;
   text-transform: uppercase;
 }
 
@@ -95,70 +34,11 @@ li a:hover {
   border: none;
   color: #fbf3f2;
   cursor: pointer;
-  background-color: #f58800;
+  background-color: #db6d2e;
   margin-top: 10px;
   font-size: 16px;
   border-radius: 3px;
 }
-/* destination styles */
-#search-destination {
-  background-color: rgb(199, 199, 199);
-  padding: 15px;
-  margin-top: 80px;
-  height: 70px;
-  display: flex;
-  justify-content: center;
-}
-
-.card {
-  background-color: white;
-  padding: 5px;
-  color: #1a4645;
-  box-shadow: 1px 3px 8px rgba(0, 0, 0, 0.733);
-  border-radius: 3px;
-  margin-left: 10px;
-  width: 250px;
-  display: grid;
-  grid-template-columns: 40px 1fr;
-  gap: 10px 5px;
-}
-.card-icon {
-  background-color: black;
-}
-.card-title {
-  font-weight: bold;
-  font-size: 18px;
-  margin-bottom: 5px;
-}
-.card-details {
-  font-size: 14px;
-}
-.kaya {
-  height: 500px;
-  background-color: aliceblue;
-}
-#destinations {
-  padding-top: 55px;
-}
-#header {
-  text-align: center;
-  font-weight: bold;
-  font-size: 40px;
-}
-.line {
-  background-color: #f58800;
-  width: 100px;
-  height: 5px;
-  margin: auto;
-}
-/*footer styles*/
-
-footer {
-  background-color: black;
-  height: 80px;
-  position: sticky;
-}
-
 @media (max-width: 723px) {
   .logo-name {
     display: none;
@@ -178,7 +58,7 @@ footer {
   }
 
   .book-button {
-    margin-left: 80px;
+    margin-left: 25px;
   }
 
   #search-destination {
@@ -191,5 +71,8 @@ footer {
   }
   .card-details {
     font-size: 12px;
+  }
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
