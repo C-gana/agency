@@ -17,15 +17,18 @@ body {
   margin: auto;
   margin-top: 150px;
   min-width: 500px;
-  max-width: 600px;
-}
-.login-container {
-  background-color: rgba(202, 191, 191, 0.541);
-  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
-  height: 230px;
-  padding: 10px;
+  max-width: 700px;
 }
 
+.login-container,
+.register-container {
+  background-color: rgba(202, 191, 191, 0.685);
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
+  padding: 10px;
+}
+.login-container {
+  height: 230px;
+}
 .logo-container {
   background-color: linear(rgb(0, 0, 0), rgb(0, 98, 78));
   height: 40px;
@@ -37,7 +40,10 @@ body {
 }
 
 .email,
-.pwd {
+.pwd,
+.pwd-confirm,
+.lname,
+.fname {
   width: 100%;
   padding: 5px;
   margin: 5px 0px;
@@ -76,6 +82,12 @@ body {
 .desc p {
   font-size: 22px;
 }
+
+#logo {
+  width: 70px;
+  margin: 0px 0px 0px 75px;
+  margin-top: 10px;
+}
 .forgot-new {
   display: flex;
   margin-top: 10px;
@@ -89,4 +101,25 @@ body {
 
 .forgot-new a:hover {
   text-decoration: underline;
+}
+
+.register-container {
+  padding-bottom: 30px;
+}
+
+.register-footer {
+  margin-top: 20px;
+}
+.register-footer p {
+  display: inline;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 27px;
+}
+.register-footer p:hover {
+  text-decoration: underline;
+}
+
+.passive {
+  display: none;
 }
