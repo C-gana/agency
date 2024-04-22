@@ -1,0 +1,6 @@
+.form-container {
+  background-color: rgba(202, 191, 191, 0.685);
+  box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
+  padding: 10px;
+  transition: ease-in 0.2s;
+}
