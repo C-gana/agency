@@ -2,15 +2,21 @@
 <html lang="en">
   <head>
     <link rel="stylesheet" href="styles/login.css" />
-    <title>Z-travel agency | Login</title>
+    <title>Z-agency | Login</title>
   </head>
   <body>
     <div class="container">
       <div class="desc">
-        <div>WELCOME</div>
-        <p>Your next adventure awaits</p>
+        <div class="login-desc">
+          <div>WELCOME</div>
+          <p>Travelling is to live twice</p>
+        </div>
+        <div class="register-desc passive">
+          <div>JOIN US!</div>
+          <p>Your next adventure awaits</p>
+        </div>
       </div>
-      <div class="login-container">
+      <div class="js-login-container login-container">
         <div class="logo-container">
           <img id="logo" src="LOGO.png" alt="" />
         </div>
@@ -26,11 +32,11 @@
           <input class="login-button" type="submit" value="Login" />
         </form>
         <div class="forgot-new">
-          <a href="">Create Account</a>
+          <div class="js-create">Create Account</div>
           <a href="">Forgot password?</a>
         </div>
       </div>
-      <div class="register-container passive">
+      <div class="js-register-container register-container passive">
         <div class="logo-container">
           <img id="logo" src="LOGO.png" alt="" />
         </div>
@@ -63,9 +69,11 @@
           <input class="login-button" type="submit" value="Register" />
         </form>
         <div class="register-footer">
-          <p>Already have account?</p>
+          <p class="js-have-account">Already have account?</p>
         </div>
       </div>
     </div>
+
+    <script src="scripts/login-register.js"></script>
   </body>
 </html>

@@ -16,8 +16,8 @@ body {
   row-gap: 5px;
   margin: auto;
   margin-top: 150px;
-  min-width: 500px;
-  max-width: 700px;
+  min-width: 300px;
+  max-width: 600px;
 }
 
 .login-container,
@@ -25,6 +25,7 @@ body {
   background-color: rgba(202, 191, 191, 0.685);
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
   padding: 10px;
+  transition: ease-in 0.2s;
 }
 .login-container {
   height: 230px;
@@ -75,12 +76,16 @@ body {
   justify-content: center;
 }
 
-.desc div {
+.login-desc div,
+.register-desc div {
   font-weight: bold;
   font-size: 50px;
+  text-align: center;
 }
-.desc p {
+.login-desc p,
+.register-desc p {
   font-size: 22px;
+  text-align: center;
 }
 
 #logo {
@@ -92,6 +97,13 @@ body {
   display: flex;
   margin-top: 10px;
   justify-content: space-between;
+}
+.js-create {
+  font-size: 14px;
+  cursor: pointer;
+}
+.js-create:hover {
+  text-decoration: underline;
 }
 .forgot-new a {
   font-size: 14px;
