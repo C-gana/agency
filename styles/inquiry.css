@@ -1,6 +1,6 @@
 form {
   margin: auto;
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 20px;
   box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.502);
   width: 510px;
@@ -23,16 +23,6 @@ form {
   padding-bottom: 10px;
 }
 
-.name-label,
-.email-label {
-  display: block;
-  margin: 8px 0px;
-}
-
-.phone-label {
-  margin-right: 158px;
-}
-
 .sites-label {
   margin-right: 172px;
 }
@@ -52,10 +42,6 @@ input::placeholder {
   color: rgb(137, 137, 137);
 }
 
-.first-name-input,
-.last-name-input,
-.phone-input,
-.travelers-input,
 .budget-input,
 .date-input {
   width: 228px;
@@ -63,18 +49,9 @@ input::placeholder {
   border-radius: 4px;
 }
 
-.first-name-input,
-.phone-input,
 #sites,
 #depart-input {
   margin-right: 25px;
-}
-
-.email-input {
-  display: block;
-  width: 98%;
-  margin-bottom: 8px;
-  border-radius: 4px;
 }
 
 #sites {
@@ -99,7 +76,7 @@ input::placeholder {
 
 .submit-button {
   display: block;
-  background-color: rgb(1, 103, 1);
+  background-color: #a7501e;
   color: white;
   border: none;
   width: 200px;
@@ -116,5 +93,5 @@ input::placeholder {
 
 .submit-button:hover {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.528);
-  background-color: rgb(2, 128, 2);
+  opacity: 0.9;
 }
