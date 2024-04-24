@@ -46,36 +46,57 @@
         </div>
         <div class="title">REGISTER</div>
         <form action="" method="post" class="reg-form">
-          <input
-            type="text"
-            class="fname"
-            name="fname"
-            placeholder="First Name"
-          /><input
-            type="text"
-            class="lname"
-            name="lname"
-            placeholder="Last Name"
-          />
-          <input type="text" class="email" name="email" placeholder="Email" />
-          <input
-            type="text"
-            class="pnumber"
-            name="pnumber"
-            placeholder="Phone Number"
-          />
-          <input
-            type="password"
-            class="pwd"
-            name="password"
-            placeholder="Password"
-          />
-          <input
-            type="password"
-            class="pwd-confirm"
-            name="password"
-            placeholder="Confirm Password"
-          />
+          <div>
+            <input
+              type="text"
+              class="fname"
+              name="fname"
+              placeholder="First Name"
+            />
+            <small></small>
+          </div>
+          <div>
+            <input
+              type="text"
+              class="lname"
+              name="lname"
+              placeholder="Last Name"
+            /><small></small>
+          </div>
+          <div>
+            <input
+              type="text"
+              class="email reg-email"
+              name="email"
+              placeholder="Email e.g example@mail.com"
+            /><small></small>
+          </div>
+          <div>
+            <input
+              type="text"
+              class="pnumber"
+              name="pnumber"
+              placeholder="Phone Number e.g 0912345678"
+            /><small></small>
+          </div>
+          <div>
+            <input
+              type="password"
+              class="pwd"
+              id="pwd"
+              name="password"
+              placeholder="Password"
+            /><small></small>
+          </div>
+          <div>
+            <input
+              type="password"
+              id="pwd-confirm"
+              class="pwd-confirm"
+              name="password"
+              placeholder="Confirm Password"
+            /><small></small>
+          </div>
           <input class="login-button" type="submit" value="Register" />
         </form>
         <div class="register-footer">
@@ -85,5 +106,6 @@
     </div>
 
     <script src="scripts/login-register.js"></script>
+    <script src="scripts/register-validation.js"></script>
   </body>
 </html>
