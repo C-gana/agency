@@ -22,13 +22,11 @@ form {
   font-size: 16px;
   padding-bottom: 10px;
 }
-
-.sites-label {
-  margin-right: 172px;
-}
-
-#depart-label {
-  margin-right: 155px;
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  padding-top: 5px;
 }
 
 input,
@@ -43,19 +41,11 @@ input::placeholder {
 }
 
 .budget-input,
-.date-input {
-  width: 228px;
+.date-input,
+select {
+  width: 100%;
   margin: 8px 0px;
   border-radius: 4px;
-}
-
-#sites,
-#depart-input {
-  margin-right: 25px;
-}
-
-#sites {
-  width: 240px;
 }
 
 .insurance {

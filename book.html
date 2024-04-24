@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles/general.css" />
     <link rel="stylesheet" href="styles/agency.css" />
     <link rel="stylesheet" href="styles/nav-bar.css" />
     <link rel="stylesheet" href="styles/inquiry.css" />
@@ -30,29 +31,41 @@
         Please fill in all fields with valid information to help us organize
         your trip.
       </p>
+      <div class="content-grid">
+        <label class="sites-label">Tourism site</label>
+        <label class="budget-label">Trip Budget <i>(per person)</i></label>
+        <div>
+          <select name="sites" id="sites" class="js-sites">
+            <option value="">---- Please select an option ----</option>
+            <option value="Likoma">Likoma</option>
+            <option value="Mangochi">Mangochi</option>
+            <option value="Mulanje">Mulanje</option>
+            <option value="Rumphi">Rumphi</option>
+          </select>
+          <small></small>
+        </div>
+        <div>
+          <input
+            type="text"
+            placeholder="Amount in USD"
+            class="budget-input js-budget"
+          />
+          <small></small>
+        </div>
+        <label class="departure-label" id="depart-label">Departure Date</label>
+        <label class="return-label">Return Date</label>
 
-      <label class="sites-label">Tourism sites</label>
-      <label class="budget-label">Trip Budget <i>(per person)</i></label>
-      <select name="sites" id="sites" class="js-sites">
-        <option value="">---- Please select an option ----</option>
-        <option value="Likoma">Likoma</option>
-        <option value="Mangochi">Mangochi</option>
-        <option value="Mulanje">Mulanje</option>
-        <option value="Rumphi">Rumphi</option>
-      </select>
-      <input
-        type="text"
-        placeholder="Amount in USD"
-        class="budget-input js-budget"
-      />
-      <label class="departure-label" id="depart-label">Departure Date</label>
-      <label class="return-label">Return Date</label>
-      <input
-        type="date"
-        class="date-input js-departure-date"
-        id="depart-input"
-      />
-      <input type="date" class="date-input js-return-date" />
+        <div>
+          <input
+            type="date"
+            class="date-input js-departure-date"
+            id="depart-input"
+          /><small></small>
+        </div>
+        <div>
+          <input type="date" class="date-input js-return-date" /><small></small>
+        </div>
+      </div>
       <div class="insurance">
         <label class="insurance-label"
           >Should We Include Travel Insurance?</label
