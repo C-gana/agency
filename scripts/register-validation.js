@@ -85,6 +85,7 @@ function passwordValidation(input) {
   if (!filledPassword()) {
     return false;
   }
+  return true;
 }
 
 // filled passwords-----------------------------------------------------------------//
