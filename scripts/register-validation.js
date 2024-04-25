@@ -12,7 +12,16 @@ regForm.addEventListener("submit", (event) => {
   let validLastName = nameValidation(lnameElement, "last name");
   let validEmail = emailValidation(emailElement, "email");
   let validPhone = phoneValidation(pnumberElement, "phone number");
-  let validPassword = passwordValidation();
+  let validPassword = passwordValidation(pwdElement);
+  if (
+    validFirstName &&
+    validLastName &&
+    validEmail &&
+    validPhone &&
+    validPassword
+  ) {
+    event.currentTarget.submit();
+  }
 });
 
 // checking if a field is filled
@@ -60,44 +69,45 @@ function emailValidation(input, field) {
   if (!isFilled(input, field)) {
     return false;
   }
-  if (input.value != regex) {
-    input.classList.add("error-box");
+  if (input.value.match(regex)) {
+    toggleError(input, "", false);
+  } else {
+    toggleError(input, EMAIL, true);
   }
 }
 
 //password validation
-function passwordValidation() {
-  let password = pwdElement.value;
-  let passwordConfirm = pwdConfirmElement.value;
-
+function passwordValidation(input) {
   //checking if both password fields are filled
   if (!filledPassword()) {
     return false;
   }
-
-  //checking the length of the password
-  if (password.length < 8) {
-    pwdElement.classList.add("error-box");
-    pwdConfirmElement.classList.add("error-box");
-    return false;
-  }
-
-  //checking if the password is matching with the confirm password
-  if (password != passwordConfirm) {
-    pwdElement.classList.add("error-box");
-    pwdConfirmElement.classList.add("error-box");
-    return false;
-  }
 }
 
-// filled passwords
+// filled passwords-----------------------------------------------------------------
 function filledPassword() {
+  let password = pwdElement.value;
+  let passwordConfirm = pwdConfirmElement.value;
   let pd1 = isFilled(pwdElement, "Password");
   let pd2 = isFilled(pwdConfirmElement, "Confirmation password");
-  if (pd1 || pd2) {
-    return false;
+  if (pd1 && pd2) {
+    //checking password length
+    if (password.length > 7) {
+      //checking if they're matching
+      if (password === passwordConfirm) {
+        console.log("zafanana");
+        return true;
+      } else {
+        toggleError(pwdElement, PASSWORD_NOT_MATCH, true);
+        toggleError(pwdConfirmElement, PASSWORD_NOT_MATCH, true);
+        return false;
+      }
+    } else {
+      toggleError(pwdElement, PASSWORD_LENGTH, true);
+      toggleError(pwdConfirmElement, PASSWORD_LENGTH, true);
+      return false;
+    }
   }
-  return true;
 }
 
 //showing the error message and adding a red border
@@ -113,7 +123,8 @@ function toggleError(input, message, test) {
 //error messages
 const NUMBERS_ONLY = "Please enter numbers only";
 const LETTERS_ONLY = "Please enter letters only";
-const PASSWORD_NOT_MATCH =
-  "The password and the confirmation password does not match";
+const PASSWORD_NOT_MATCH = "Please enter same password and confirm password";
+const PASSWORD_LENGTH = "Please enter atleast 8 characters for password";
 const EMPTY = "Please fill in ";
 const PHONE = "Please enter a 10 digit phone number";
+const EMAIL = 'Follow this format "example@mail.com"';
