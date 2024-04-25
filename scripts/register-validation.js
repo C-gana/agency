@@ -6,6 +6,7 @@ const pnumberElement = document.querySelector(".pnumber");
 const pwdElement = document.getElementById("pwd");
 const pwdConfirmElement = document.getElementById("pwd-confirm");
 
+// registration form validation -------------------------------------------------------------//
 regForm.addEventListener("submit", (event) => {
   event.preventDefault();
   let validFirstName = nameValidation(fnameElement, "first name");
@@ -21,10 +22,11 @@ regForm.addEventListener("submit", (event) => {
     validPassword
   ) {
     event.currentTarget.submit();
+    console.log("submited");
   }
 });
 
-// checking if a field is filled
+// checking if a field is filled-----------------------------------------------------------//
 function isFilled(input, field) {
   if (input.value === "") {
     toggleError(input, `${EMPTY}${field}`, true);
@@ -35,7 +37,7 @@ function isFilled(input, field) {
   }
 }
 
-// name validation
+// name validation------------------------------------------------------------------------//
 function nameValidation(input, field) {
   if (!isFilled(input, field)) {
     return false;
@@ -48,7 +50,7 @@ function nameValidation(input, field) {
   return true;
 }
 
-//phone number validation
+//phone number validation----------------------------------------------------------------//
 function phoneValidation(input, field) {
   if (!isFilled(input, field)) {
     return false;
@@ -63,7 +65,7 @@ function phoneValidation(input, field) {
   return true;
 }
 
-//emalil validation
+//emalil validation--------------------------------------------------------------------//
 function emailValidation(input, field) {
   const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z]{2,4}$/;
   if (!isFilled(input, field)) {
@@ -74,17 +76,18 @@ function emailValidation(input, field) {
   } else {
     toggleError(input, EMAIL, true);
   }
+  return true;
 }
 
-//password validation
+//password validation----------------------------------------------------------------//
 function passwordValidation(input) {
-  //checking if both password fields are filled
+  //checking if both password fields are filled--------------------------------//
   if (!filledPassword()) {
     return false;
   }
 }
 
-// filled passwords-----------------------------------------------------------------
+// filled passwords-----------------------------------------------------------------//
 function filledPassword() {
   let password = pwdElement.value;
   let passwordConfirm = pwdConfirmElement.value;
@@ -93,7 +96,7 @@ function filledPassword() {
   if (pd1 && pd2) {
     //checking password length
     if (password.length > 7) {
-      //checking if they're matching
+      //checking if they're matching-----------------------------------------//
       if (password === passwordConfirm) {
         console.log("zafanana");
         return true;
@@ -110,7 +113,7 @@ function filledPassword() {
   }
 }
 
-//showing the error message and adding a red border
+//showing the error message and adding a red border-------------------------------------//
 function toggleError(input, message, test) {
   if (test === true) {
     input.classList.add("error-box");
