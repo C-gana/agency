@@ -9,20 +9,18 @@ body {
   grid-template-columns: 1fr 300px;
   row-gap: 5px;
   margin: auto;
-  margin-top: 150px;
+  margin-top: 60px;
   min-width: 300px;
   max-width: 700px;
 }
 
-.login-container {
+.register-container {
   background-color: rgba(202, 191, 191, 0.781);
   box-shadow: 1px 3px 3px rgba(0, 0, 0, 0.384);
   padding: 10px;
   transition: ease-in 0.2s;
 }
-.login-container {
-  height: 250px;
-}
+
 .logo-container {
   background-color: linear(rgb(0, 0, 0), rgb(0, 98, 78));
   height: 40px;
@@ -34,7 +32,11 @@ body {
 }
 
 .email,
-.pwd {
+.pnumber,
+.pwd,
+.pwd-confirm,
+.lname,
+.fname {
   width: 100%;
   padding: 5px;
   margin: 5px 0px;
@@ -66,37 +68,41 @@ body {
   justify-content: center;
 }
 
-.login-desc div {
+.register-desc div {
   font-weight: bold;
   font-size: 50px;
   text-align: center;
 }
-.login-desc p {
+
+.register-desc p {
   font-size: 22px;
   text-align: center;
 }
 
 #logo {
   width: 70px;
-  margin: 0px 0px 0px 104px;
+  margin: 0px 0px 0px 103px;
   margin-top: 10px;
-}
-.forgot-new {
-  display: flex;
-  margin-top: 10px;
-  justify-content: space-between;
 }
 
-.forgot-new a {
-  font-size: 14px;
+.register-container {
+  padding-bottom: 30px;
+}
+
+.register-footer {
+  margin-top: 20px;
+}
+.register-footer a {
+  display: inline;
+  padding: 5px;
+  cursor: pointer;
+  margin-left: 50px;
   text-decoration: none;
   color: black;
 }
-
-.forgot-new a:hover {
+.register-footer a:hover {
   text-decoration: underline;
 }
-
 .error-box {
   border: 1px solid red;
 }

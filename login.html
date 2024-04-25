@@ -22,7 +22,7 @@
           <img id="logo" src="LOGO.png" alt="" />
         </div>
         <div class="title">LOGIN</div>
-        <div class="error passive">Incorrect Email or Password</div>
+        <div class="error">Incorrect Email or Password</div>
         <form action="" method="post">
           <input type="text" class="email" name="email" placeholder="Email" />
           <input
@@ -34,78 +34,10 @@
           <input class="login-button" type="submit" value="Login" />
         </form>
         <div class="forgot-new">
-          <div class="js-create">Create Account</div>
+          <a href="register.html">Create Account</a>
           <a href="">Forgot password?</a>
         </div>
       </div>
-
-      <!-- registration details-->
-      <div class="js-register-container register-container passive">
-        <div class="logo-container">
-          <img id="logo" src="LOGO.png" alt="" />
-        </div>
-        <div class="title">REGISTER</div>
-        <form action="db_conn.php" method="post" class="reg-form">
-          <div>
-            <input
-              type="text"
-              class="fname"
-              name="fname"
-              placeholder="First Name"
-            />
-            <small></small>
-          </div>
-          <div>
-            <input
-              type="text"
-              class="lname"
-              name="lname"
-              placeholder="Last Name"
-            /><small></small>
-          </div>
-          <div>
-            <input
-              type="text"
-              class="email reg-email"
-              name="email"
-              placeholder="Email e.g example@mail.com"
-            /><small></small>
-          </div>
-          <div>
-            <input
-              type="text"
-              class="pnumber"
-              name="pnumber"
-              placeholder="Phone Number e.g 0912345678"
-            /><small></small>
-          </div>
-          <div>
-            <input
-              type="password"
-              class="pwd"
-              id="pwd"
-              name="password"
-              placeholder="Password"
-            /><small></small>
-          </div>
-          <div>
-            <input
-              type="password"
-              id="pwd-confirm"
-              class="pwd-confirm"
-              name="password"
-              placeholder="Confirm Password"
-            /><small></small>
-          </div>
-          <input class="login-button" type="submit" value="Register" />
-        </form>
-        <div class="register-footer">
-          <p class="js-have-account">Already have account?</p>
-        </div>
-      </div>
     </div>
-
-    <script src="scripts/login-register.js"></script>
-    <script src="scripts/register-validation.js"></script>
   </body>
 </html>
