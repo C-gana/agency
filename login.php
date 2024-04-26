@@ -34,7 +34,7 @@
           <input class="login-button" type="submit" value="Login" />
         </form>
         <div class="forgot-new">
-          <a href="register.html">Create Account</a>
+          <a href="register.php">Create Account</a>
           <a href="">Forgot password?</a>
         </div>
       </div>
