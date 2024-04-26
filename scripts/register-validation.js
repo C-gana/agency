@@ -8,6 +8,7 @@ const pwdConfirmElement = document.getElementById("pwd-confirm");
 
 // registration form validation -------------------------------------------------------------//
 regForm.addEventListener("submit", (event) => {
+  //preventing the form from submiting without client side validation----------------//
   event.preventDefault();
   let validFirstName = nameValidation(fnameElement, "first name");
   let validLastName = nameValidation(lnameElement, "last name");
@@ -21,8 +22,8 @@ regForm.addEventListener("submit", (event) => {
     validPhone &&
     validPassword
   ) {
+    // deactivating preventDefault() when the form is valid--------------------------//
     event.currentTarget.submit();
-    console.log("submited");
   }
 });
 
@@ -75,6 +76,7 @@ function emailValidation(input, field) {
     toggleError(input, "", false);
   } else {
     toggleError(input, EMAIL, true);
+    return false;
   }
   return true;
 }
@@ -97,7 +99,7 @@ function filledPassword() {
   if (pd1 && pd2) {
     //checking password length
     if (password.length > 7) {
-      //checking if they're matching-----------------------------------------//
+      //checking if they're matching-------------------------------------//
       if (password === passwordConfirm) {
         console.log("zafanana");
         return true;
@@ -124,7 +126,7 @@ function toggleError(input, message, test) {
   input.parentNode.querySelector("small").innerText = message;
 }
 
-//error messages
+//error messages------------------------------------------------------------------------//
 const NUMBERS_ONLY = "Please enter numbers only";
 const LETTERS_ONLY = "Please enter letters only";
 const PASSWORD_NOT_MATCH = "Please enter same password and confirm password";
