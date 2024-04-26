@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/agency.css" />
-    <link rel="stylesheet" href="styles/nav-bar.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/agency.css" />
+    <link rel="stylesheet" href="../styles/nav-bar.css" />
     <title>Z-agency | Home</title>
   </head>
   <body>
@@ -12,7 +12,7 @@
     </div>
     <nav>
       <div class="logo">
-        <img src="LOGO.png" alt="" />
+        <img src="../imagesLOGO.png" alt="" />
       </div>
       <div class="nav-links">
         <ul>
@@ -31,6 +31,5 @@
           <button class="book-button"><a href="book.html">Book a Trip</a></button>
         </div>
       </section>
-      
   </body>
 </html>

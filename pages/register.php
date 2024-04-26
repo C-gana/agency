@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/reg.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/reg.css" />
     <title>Z-agency | Register</title>
   </head>
   <body>
     <?php
-    require('db_conn.php');
+    require('../db_conn.php');
     if (isset($_REQUEST['fname'])) {
       $first_name = htmlspecialchars($_REQUEST['fname']);
       $last_name = htmlspecialchars($_REQUEST['lname']);
@@ -36,7 +36,7 @@
       </div>
       <div class="js-register-container register-container">
         <div class="logo-container">
-          <img id="logo" src="LOGO.png" alt="" />
+          <img id="logo" src="../images/LOGO.png" alt="" />
         </div>
         <div class="title">REGISTER</div>
         <form action="" method="post" class="reg-form">
@@ -98,6 +98,6 @@
         </div>
       </div>
     </div>
-    <script src="scripts/register-validation.js"></script>
+    <script src="../scripts/register-validation.js"></script>
   </body>
 </html>

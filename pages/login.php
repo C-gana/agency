@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/login.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/login.css" />
     <title>Z-agency | Login</title>
   </head>
   <body>
@@ -19,7 +19,7 @@
       </div>
       <div class="js-login-container login-container">
         <div class="logo-container">
-          <img id="logo" src="LOGO.png" alt="" />
+          <img id="logo" src="../images/LOGO.png" alt="" />
         </div>
         <div class="title">LOGIN</div>
         <div class="error">Incorrect Email or Password</div>

@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="styles/general.css" />
-    <link rel="stylesheet" href="styles/agency.css" />
-    <link rel="stylesheet" href="styles/nav-bar.css" />
-    <link rel="stylesheet" href="styles/inquiry.css" />
+    <link rel="stylesheet" href="../styles/general.css" />
+    <link rel="stylesheet" href="../styles/agency.css" />
+    <link rel="stylesheet" href="../styles/nav-bar.css" />
+    <link rel="stylesheet" href="../styles/inquiry.css" />
     <title>Z-agency | Book a Trip</title>
   </head>
   <body>
     <div class="nav-top" id="home">
-      <div class="login"><a href="login.html">Logout</a></div>
+      <div class="login"><a href="logout.php">Logout</a></div>
     </div>
     <nav>
       <div class="logo">
@@ -80,6 +80,6 @@
 
       <input type="submit" value="Submit" class="submit-button" />
     </form>
-    <script src="scripts/book-validation.js"></script>
+    <script src="../scripts/book-validation.js"></script>
   </body>
 </html>
