@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>date comparison</title>
+  </head>
+  <body>
+    <form action="" class="form">
+      <input type="date" class="js-date" />
+      <input type="submit" />
+    </form>
+  </body>
+  <script>
+    const dateElement = document.querySelector(".js-date");
+    const form = document.querySelector(".form");
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      let date = dateValidation(dateElement.value);
+    });
+
+    function dateValidation(input) {
+      let currentDate = new Date();
+      let inputYear = input.split("-")[0];
+      let inputMonth = input.split("-")[1];
+      let inputDay = input.split("-")[2];
+      let currentYear = currentDate.getFullYear();
+      let currentMonth = currentDate.getMonth() + 1;
+      let currentDay = currentDate.getDate();
+
+      if (inputMonth < currentMonth) {
+        alert("mwezi");
+      }
+      if (inputYear < currentYear) {
+        alert("chaka");
+      }
+      if (inputDay < currentDay) {
+        alert(inputDay);
+      }
+    }
+  </script>
+</html>

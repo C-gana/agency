@@ -6,6 +6,26 @@
     <title>Z-agency | Login</title>
   </head>
   <body>
+    <?php
+    require ('../db_conn.php');
+    session_start();
+    //check form submission
+    if (isset($_POST['email'])){
+      $email = htmlspecialchars($_REQUEST['email']);
+      $password = htmlspecialchars($_REQUEST['password']);
+      $sql = "SELECT * FROM `users` WHERE email='$email'
+                     AND password='" . md5($password) . "'";
+      $result = $conn->query($sql);
+      $rows = mysqli_num_rows($result);
+
+      if ($rows === 1) {
+        $_SESSION['email'] = $email;
+        header("Location:home.php");
+      } else {
+        header("Location:login.php?error=Incorect Email or Password");
+      }
+    }else{
+    ?>
     <div class="container">
       <div class="desc">
         <div class="login-desc">
@@ -22,7 +42,9 @@
           <img id="logo" src="../images/LOGO.png" alt="" />
         </div>
         <div class="title">LOGIN</div>
-        <div class="error">Incorrect Email or Password</div>
+        <?php if (isset($_GET['error'])) { ?>
+        <div class="error"><?php echo $_GET['error']; ?></div>
+        <?php }?>
         <form action="" method="post">
           <input type="text" class="email" name="email" placeholder="Email" />
           <input
@@ -39,5 +61,8 @@
         </div>
       </div>
     </div>
+    <?php
+    }
+    ?>
   </body>
 </html>

@@ -1,3 +1,6 @@
+<?php
+include("../auth_session.php");
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,11 +11,11 @@
   </head>
   <body>
     <div class="nav-top" id="home">
-      <div class="login"><a href="login.html">Logout</a></div>
+      <div class="login"><a href="logout.php">Logout</a></div>
     </div>
     <nav>
       <div class="logo">
-        <img src="../imagesLOGO.png" alt="" />
+        <img src="../images/LOGO.png" alt="" />
       </div>
       <div class="nav-links">
         <ul>
@@ -28,7 +31,7 @@
       <section>
         <div class="container">
           <p><span>DISCOVER</span>&nbsp;A World you have never seen</p>
-          <button class="book-button"><a href="book.html">Book a Trip</a></button>
+          <button class="book-button"><a href="book.php">Book a Trip</a></button>
         </div>
       </section>
   </body>

@@ -15,7 +15,6 @@
       $email = htmlspecialchars($_REQUEST['email']);
       $password = htmlspecialchars($_REQUEST['password']);
 
-      echo "$first_name $last_name $phone_number $email $password";
       //inserting values in the database
       $sql = "INSERT into `users` (first_name, last_name, email, phone_number, password)
               VALUES('$first_name', '$last_name', '$email', '$phone_number','".md5($password)."' ) ";
@@ -23,7 +22,7 @@
       
       if($result){
         echo "Registration successful";
-        header("Location:index.php");
+        header("Location:../index.php");
       }
   }
 ?>

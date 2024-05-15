@@ -85,3 +85,10 @@ select {
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.528);
   opacity: 0.9;
 }
+
+.error-box {
+  border: 1px solid red;
+}
+small {
+  color: red;
+}
