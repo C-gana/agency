@@ -75,3 +75,108 @@ body {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+section {
+  height: 400px;
+}
+/* the destination styles*/
+.home {
+  background-color: white;
+  margin-bottom: 500px;
+  padding: 20px;
+}
+.title {
+  font-weight: bold;
+  font-size: 30px;
+  text-align: center;
+}
+.card-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 30px;
+}
+.card {
+  width: 200px;
+  background-color: rgb(221, 219, 219);
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+  animation: appear 1s;
+  transition: transform 1s;
+}
+.card:hover {
+  transform: scale(1.3);
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
+@keyframes appear {
+  from {
+    transform: scale(0.5);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+@keyframes slide {
+  from {
+    transform: translateX(800px);
+  }
+  to {
+    transform: translateX(1);
+  }
+}
+.card img {
+  height: 160px;
+}
+.card p {
+  text-align: center;
+  padding: 10px 0px;
+}
+.view {
+  position: absolute;
+  top: 70px;
+  left: 20%;
+  border: 1px solid rgba(0, 0, 0, 0.804);
+  padding: 5px 10px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.754);
+  font-weight: bold;
+}
+.advert {
+  height: 200px;
+  width: 800px;
+  background-color: #e6e6e6;
+  margin: 30px auto;
+  color: white;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.advert .title {
+  top: 30%;
+  position: absolute;
+  left: 25%;
+  z-index: 100;
+}
+.advert p {
+  text-align: center;
+  top: 53%;
+  left: 40%;
+  font-size: 20px;
+  position: absolute;
+  z-index: 100;
+}
+#frame {
+  position: absolute;
+  z-index: 90;
+}
+#discover-img {
+  animation: slide 2s;
+}
