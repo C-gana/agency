@@ -40,22 +40,22 @@ include("../auth_session.php");
         <div class="title">Destinations</div>
         <div class="card-container">
           <div class="card">
-            <img src="/images/mulanje.jpg" alt="" />
+            <img src="/agency/images/mulanje.jpg" alt="" />
             <div class="view">View images</div>
             <p>Mulanje Mountain</p>
           </div>
           <div class="card">
-            <img src="/images/salima.jpg" alt="" />
+            <img src="/agency/images/salima.jpg" alt="" />
             <div class="view">View images</div>
             <p>Salima beaches</p>
           </div>
           <div class="card">
-            <img src="/images/mantchewe.jpg" alt="" />
+            <img src="/agency/images/mantchewe.jpg" alt="" />
             <div class="view">View images</div>
             <p>Livingstonia Plateau</p>
           </div>
           <div class="card">
-            <img src="/images/likoma-island.jpg" alt="" />
+            <img src="/agency/images/likoma-island.jpg" alt="" />
 
             <div class="view">View images</div>
             <p>Likoma Island</p>
@@ -64,8 +64,8 @@ include("../auth_session.php");
         <div class="advert">
           <div class="title">Discover New Destinations</div>
           <p>To travel is to live</p>
-          <img id="frame" src="/images/Untitled-1.png" alt="" />
-          <img id="discover-img" src="/images/discover-1.jpg" alt="" />
+          <img id="frame" src="/agency/images/Untitled-1.png" alt="" />
+          <img id="discover-img" src="/agency/images/discover-1.jpg" alt="" />
         </div>
       </div>
     </main>

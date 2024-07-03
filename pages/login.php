@@ -57,7 +57,7 @@
         </form>
         <div class="forgot-new">
           <a href="register.php">Create Account</a>
-          <a href="">Forgot password?</a>
+          <a href="recover.php">Forgot password?</a>
         </div>
       </div>
     </div>

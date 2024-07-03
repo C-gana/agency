@@ -100,11 +100,15 @@ section {
   overflow: hidden;
   cursor: pointer;
   position: relative;
-  animation: appear 1s;
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry;
   transition: transform 1s;
+  box-shadow: -2px 3px 3px rgba(0, 0, 0, 0.192);
 }
 .card:hover {
-  transform: scale(1.3);
+  transform: scale(1.2);
+  outline: 3px solid orangered;
 }
 
 @keyframes zoom {
@@ -118,9 +122,11 @@ section {
 @keyframes appear {
   from {
     transform: scale(0.5);
+    opacity: 0.5;
   }
   to {
     transform: scale(1);
+    opacity: 1;
   }
 }
 @keyframes slide {
@@ -157,6 +163,7 @@ section {
   overflow: hidden;
   position: relative;
   cursor: pointer;
+  box-shadow: 0px 0px 3px rgb(0, 0, 0);
 }
 
 .advert .title {
@@ -178,5 +185,9 @@ section {
   z-index: 90;
 }
 #discover-img {
-  animation: slide 2s;
+  animation: slide linear;
+  transition: all 1s;
+}
+.advert:hover #discover-img {
+  scale: 1.1;
 }
